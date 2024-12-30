@@ -1,0 +1,37 @@
+ALGORITHM sentence
+VAR
+    sentence:STRING :="hello gomycode we are ready.";
+    L:INTEGER:=length(sentence);
+    i , j :INTEGER; 
+    v:INTEGER:=length(vowels);
+    number,k:INTEGER:=0;
+    vowels:string:="aeuioy";
+BEGIN
+    Read(sentence); 
+    FOR i FROM 0 TO L-1 STEP 1  DO
+      IF (sentence[i]=" ") THEN
+       number:=number+1;  
+      END_IF        
+ END_FOR
+
+ FOR i FROM 0 TO L-1 STEP 1  DO
+    
+    FOR j FROM 0 TO v-1 STEP 1  DO
+        
+        IF (sentence[i]=vowels[j]) THEN 
+         
+         k:=k+1; 
+            
+        END_IF
+    END_FOR
+ END_FOR
+    
+    
+    
+    
+    Write(L); 
+    Write(number+1);
+    Write(k);
+
+
+END
